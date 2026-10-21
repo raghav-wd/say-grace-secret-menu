@@ -19,6 +19,7 @@
 
   --page-tint: var(--ivory);
   --gutter: clamp(20px, 6vw, 56px);
+  --section-offset: calc(env(safe-area-inset-top, 0px) + 72px);
 
   --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --font-sans: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -38,6 +39,8 @@ html {
   color-scheme: only light;
   background: var(--ivory);
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-block: var(--section-offset) 24px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -366,11 +369,14 @@ a { color: inherit; }
 .hero {
   position: relative;
   display: grid;
+  min-height: 100svh;
   gap: 30px;
   max-width: 1180px;
   margin: 0 auto;
   padding: calc(env(safe-area-inset-top, 0px) + 26px) var(--gutter) 64px;
   text-align: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .hero__brand { display: flex; justify-content: center; }
@@ -688,7 +694,14 @@ a { color: inherit; }
   list-style: none;
 }
 
-.secret { position: relative; scroll-margin-top: 72px; }
+.secret {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: calc(100svh - var(--section-offset) - 24px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 
 .secret__card {
   display: grid;
@@ -954,6 +967,8 @@ a { color: inherit; }
    ========================================================================== */
 .order {
   padding: clamp(110px, 16vw, 160px) var(--gutter) 24px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .order__card {
@@ -1009,6 +1024,7 @@ a { color: inherit; }
 .footer {
   padding: 64px var(--gutter) calc(env(safe-area-inset-bottom, 0px) + 44px);
   text-align: center;
+  scroll-snap-align: end;
 }
 
 .footer__thanks {
@@ -1170,5 +1186,5 @@ a { color: inherit; }
   .welcome__glow { opacity: 1; transform: none; }
   .welcome__awning { transform: none; }
   .ribbon__track { animation: none; }
-  html { scroll-behavior: auto; }
+  html { scroll-behavior: auto; scroll-snap-type: none; }
 }
