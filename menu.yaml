@@ -1,0 +1,124 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  Say Gracé · Secret Menu
+#  This is the ONLY file you need to edit to update the menu.
+#
+#  Tips
+#  • Items appear in the order they are listed (numbers are added for you).
+#  • Image paths are relative to the site root, without a leading "/"
+#    (e.g. assets/menu/my-dessert.webp), or a full https:// URL.
+#  • image_style:
+#      cutout → a transparent PNG/WebP that floats over the coloured arch
+#      photo  → a regular rectangular photo that fills the arch (default)
+#  • tint   = the soft colour behind the dessert photo (keep it light)
+#    accent = small coloured details (number, tagline, badge) — keep it dark
+#             enough to read on a light background.
+#  • Leave price, badge, tagline or garnish empty (or delete the line) to hide it.
+#  • Wrap words in *asterisks* to show them in italics, e.g. "The *Secret* Menu".
+#  • {count} / {Count} is replaced with the number of items ("five" / "Five").
+# ─────────────────────────────────────────────────────────────────────────────
+
+currency: "₹"
+
+brand:
+  name: Say Gracé
+  tagline: Crafted with love, made to indulge.
+
+# Quick full-screen welcome shown when the page opens (tap anywhere to skip).
+welcome:
+  enabled: true
+  eyebrow: Welcome to
+  message: Come on in — something sweet is waiting.
+
+hero:
+  whisper: psst… you found it
+  title: The *Secret* Menu
+  intro: "{Count} off-menu indulgences, made for those in the know. Ask for them by name — we'll keep it between us."
+  cta: Take a peek
+  badge: The secret menu ✦ Say Gracé ✦ Shh, don't tell ✦
+
+# Words that scroll across the ribbon between the intro and the menu.
+ribbon:
+  - Off the menu
+  - Shh… it's a secret
+  - Ask for it by name
+  - Only at Say Gracé
+
+items:
+  - name: Scoopable Cookie
+    tagline: Grab a spoon & dig in warm.
+    description: >-
+      Warm vanilla cookie base filled with rich, melted milk chocolate,
+      served in a tin for the ultimate scoopable indulgence.
+    price: 179 # placeholder price — update
+    badge: Served warm
+    image: assets/menu/scoopable-cookie.webp
+    image_alt: A warm vanilla cookie in a round tin, a spoon lifting a scoop of molten milk chocolate
+    image_style: cutout
+    garnish: assets/menu/garnishes/chocolate.webp
+    tint: "#F5E4C3"
+    accent: "#8C5512"
+
+  - name: Forbidden Berry
+    tagline: Forbidden? Only a little.
+    description: >-
+      Rich brownie layered with strawberry chocolate filling and white chocolate,
+      finished with a scoop of strawberry ice cream.
+    price: 169 # placeholder price — update
+    badge:
+    image: assets/menu/forbidden-berry.webp
+    image_alt: A layered brownie with strawberry chocolate filling and white chocolate, topped with a scoop of strawberry ice cream
+    image_style: cutout
+    garnish: assets/menu/garnishes/strawberry.webp
+    tint: "#F8D9DF"
+    accent: "#AE2F4E"
+
+  - name: Pistachio Royals
+    tagline: Fit for royalty, made for you.
+    description: >-
+      A rich, fudgy brownie topped with creamy pistachio spread, silky milk
+      chocolate drizzle, and a scoop of velvety vanilla ice cream.
+    price: 189 # placeholder price — update
+    badge:
+    image: assets/menu/pistachio-royals.webp
+    image_alt: A fudgy brownie topped with pistachio spread, milk chocolate drizzle and a scoop of vanilla ice cream
+    image_style: cutout
+    garnish: assets/menu/garnishes/pistachio.webp
+    tint: "#E3EBCB"
+    accent: "#4F6B22"
+
+  - name: Bounty Brownie
+    tagline: A little island escape.
+    description: >-
+      A fudgy chocolate brownie layered with creamy coconut filling, drizzled
+      with silky milk chocolate, and paired with a scoop of velvety vanilla ice cream.
+    price: 169 # placeholder price — update
+    badge:
+    image: assets/menu/bounty-brownie.webp
+    image_alt: A chocolate brownie layered with creamy coconut filling, drizzled with milk chocolate and topped with vanilla ice cream
+    image_style: cutout
+    garnish: assets/menu/garnishes/coconut.webp
+    tint: "#D7ECE7"
+    accent: "#226A60"
+
+  - name: Midnight Mocha
+    tagline: For the after-dark cravings.
+    description: >-
+      A rich, fudgy brownie layered with creamy hazelnut spread and indulgent
+      coffee spread, finished with a silky chocolate drizzle and paired with a
+      scoop of velvety vanilla ice cream.
+    price: 179 # placeholder price — update
+    badge:
+    image: assets/menu/midnight-mocha.webp
+    image_alt: A dark fudgy brownie layered with hazelnut and coffee spreads, chocolate drizzle and a scoop of vanilla ice cream
+    image_style: cutout
+    garnish: assets/menu/garnishes/coffee.webp
+    tint: "#E0DCF1"
+    accent: "#433775"
+
+how_to_order:
+  title: How to order
+  text: Just whisper the name at the counter — we'll take it from there.
+
+footer:
+  thanks: Thank you for choosing
+  signoff: See you soon!
